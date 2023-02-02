@@ -9,8 +9,8 @@ pool:
 steps:
 - task: Gradle@2
   inputs:
-    workingDirectory: 'AndroidApps/MyApp'
-    gradleWrapperFile: 'AndroidApps/MyApp/gradlew'
+    workingDirectory: 'pipelines-android/app'
+    gradleWrapperFile: 'pipelines-android/blob/master/gradlew'
     gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
