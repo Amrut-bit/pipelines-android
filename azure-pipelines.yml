@@ -4,13 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
 
 pool:
-  vmImage: 'macOS-latest'
+  vmImage: 'Android'
 
 steps:
 - task: Gradle@2
   inputs:
-    workingDirectory: ''
-    gradleWrapperFile: 'gradlew'
+    workingDirectory: '$(system.defaultWorkingDirectory)/AndroidApps/MyApp'
+    gradleWrapperFile: '$(system.defaultWorkingDirectory)/AndroidApps/MyApp/gradlew'
     gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
